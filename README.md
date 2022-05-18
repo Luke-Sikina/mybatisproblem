@@ -9,3 +9,5 @@ java.lang.reflect.InaccessibleObjectException: Unable to make public final java.
 ```
 
 I think this is due to the finalization of the effort to encapsulate JRE internals.
+
+**Note: In this branch, the error is fixed! To see the error, checkout master.**

@@ -19,7 +19,7 @@ public interface ExampleMapper {
                 </if>
                 <if test="@java.util.Arrays@stream(ids.toArray()).distinct().count() > 1">
                     id IN\040
-                    <foreach item='item' index='index' collection='ids' open='(' separator=',' close=')'> #{item} </foreach>
+                    <foreach item='item' index='index' collection='@java.util.Arrays@stream(ids.toArray()).distinct().collect(@java.util.stream.Collectors@toList())' open='(' separator=',' close=')'> #{item} </foreach>
                 </if>
         </script>
         """)
